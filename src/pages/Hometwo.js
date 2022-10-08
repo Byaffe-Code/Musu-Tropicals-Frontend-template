@@ -13,31 +13,31 @@ import Sliderfour from '../components/Sliderfour';
 
 
 const discountProduct = [
-    { imageUrl: 'p.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm'},
-    { imageUrl: 'p.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm'},
-    { imageUrl: 'p.png', title: 'Tailgater Sandwich ', price: '99', weight: '100 gm'},
-    { imageUrl: 'p.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm'},
-    { imageUrl: 'p.png', title: 'Apple Juice Organic ', price: '40', weight: '2 Kg'},
-    { imageUrl: 'p.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
+    { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm'},
+    { imageUrl: 'deals-of-the-day/image2.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm'},
+    { imageUrl: 'deals-of-the-day/image3.png', title: 'Tailgater Sandwich ', price: '99', weight: '100 gm'},
+    { imageUrl: 'deals-of-the-day/image4.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm'},
+    { imageUrl: 'deals-of-the-day/image5.png', title: 'Apple Juice Organic ', price: '40', weight: '2 Kg'},
+    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
 ]
 
 
 const trendProduct = [
-    { imageUrl: 'p.png', title: 'Apple Juice Organic Food ', price: '39', weight: '200 gm'},
-    { imageUrl: 'p.png', title: 'Almonds Lightly Salted ', price: '29', weight: '300 gm'},
-    { imageUrl: 'p.png', title: 'Assorted Donuts Salted ', price: '79', weight: '5 Kg'},
-    { imageUrl: 'p.png', title: 'Natures Own 100% Wheat ', price: '29', weight: '500 gm'},
-    { imageUrl: 'p.png', title: 'Blue Diamond Almonds ', price: '40', weight: '400 gm'},
-    { imageUrl: 'p.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
+    { imageUrl: 'deals-of-the-day/image1.png', title: 'Apple Juice Organic Food ', price: '39', weight: '200 gm'},
+    { imageUrl: 'deals-of-the-day/image2.png', title: 'Almonds Lightly Salted ', price: '29', weight: '300 gm'},
+    { imageUrl: 'deals-of-the-day/image3.png', title: 'Assorted Donuts Salted ', price: '79', weight: '5 Kg'},
+    { imageUrl: 'deals-of-the-day/image4.png', title: 'Natures Own 100% Wheat ', price: '29', weight: '500 gm'},
+    { imageUrl: 'deals-of-the-day/image5.png', title: 'Blue Diamond Almonds ', price: '40', weight: '400 gm'},
+    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
 ]
 
 const bestProduct = [
-    { imageUrl: 'p.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm'},
-    { imageUrl: 'p.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm'},
-    { imageUrl: 'p.png', title: 'Tailgater Ham Sandwich ', price: '99', weight: '100 gm'},
-    { imageUrl: 'p.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm'},
-    { imageUrl: 'p.png', title: 'Apple Juice Organic Food ', price: '40', weight: '2 Kg'},
-    { imageUrl: 'p.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
+    { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm'},
+    { imageUrl: 'deals-of-the-day/image2.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm'},
+    { imageUrl: 'deals-of-the-day/image3.png', title: 'Tailgater Ham Sandwich ', price: '99', weight: '100 gm'},
+    { imageUrl: 'deals-of-the-day/image4.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm'},
+    { imageUrl: 'deals-of-the-day/image5.png', title: 'Apple Juice Organic Food ', price: '40', weight: '2 Kg'},
+    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
 ]
 
 class Hometwo extends Component {
@@ -100,7 +100,7 @@ class Hometwo extends Component {
                 <Header />
                 <Lowerheadertwo />
 
-                <div className="banner-wrapper pt-4 pb-4 md-mt-6" style={{backgroundImage: `url("https://via.placeholder.com/1900x685.png")`}}>
+                <div className="banner-wrapper pt-4 pb-4 md-mt-6" style={{backgroundImage: `url("assets/images/background/background.jpeg")`}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-9">
@@ -108,7 +108,7 @@ class Hometwo extends Component {
                             </div>
                             <div className="col-lg-3 ps-lg-0 d-none d-lg-block">
                                 <div className="card w-100 border-0 shadow-none ovh rounded-6 hover-zoom-image">
-                                    <img src="https://via.placeholder.com/260x485.png" alt="banner" className="w-100" />
+                                    <img src="assets/images/promotion/promotion-landing.jpeg" alt="banner" className="w-100" />
                                     <div className="p-4 posa top-0 w-100">
                                         <span className="fw-700 ls-3 text-white bg-current ps-2 pe-2 lh-24 rounded-6 d-inline-block font-xsssss">30% OFF</span>
                                         <h4 className="font-md fw-700 lh-28 text-grey-900 mb-1 mt-3 ls-0">High Quality <br /> Products</h4>

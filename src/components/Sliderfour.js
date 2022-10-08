@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 const categoryList = [
     {   
-        imageUrl: 'slide.png',
+        imageUrl: 'banner/high-organic.jpeg',
         tag: 'All natural products',
         titleone: 'Healty Food Pure',
         titletwo: ' Organic Market',
@@ -13,7 +13,7 @@ const categoryList = [
         content:'item rounded-6 bg-image-cover ovh style1 d-flex justify-content-center'
     },
     {   
-        imageUrl: 'slide.png',
+        imageUrl: 'banner/special-offer.jpeg',
         tag: 'All natural products',
         titleone: 'Summer Discount',
         titletwo: ' Organic Market',
@@ -23,7 +23,7 @@ const categoryList = [
         content:'item rounded-6 bg-image-cover ovh style1 d-flex justify-content-start'
     },
     {   
-        imageUrl: 'slide.png',
+        imageUrl: 'banner/super-discount.jpeg',
         tag: 'All natural products',
         titleone: 'Summer Discount',
         titletwo: ' Organic Market',

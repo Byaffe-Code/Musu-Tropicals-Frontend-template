@@ -3,17 +3,17 @@ import { Link  } from 'react-router-dom';
 
 const newDemoList = [
     {
-        imageUrl: 'blog.png',
+        imageUrl: 'our-blog/broad-beans.jpeg',
         title: 'Broad beans, tomato, garlic & mozzarella cheese bruschetta',
         meta: 'Lifestyle'
     },
     {
-        imageUrl: 'blog.png',
+        imageUrl: 'our-blog/steak-salad.jpeg',
         title: 'Steak salad with goat cheese and arugula for your family?',
         meta: 'Food'
     },
     {
-        imageUrl: 'blog.png',
+        imageUrl: 'our-blog/egg-salad.jpeg',
         title: 'Egg salad sandwich with avocado and watercress chip pancakes',
         meta: 'Lifestyle'
     },

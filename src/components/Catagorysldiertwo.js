@@ -3,51 +3,51 @@ import Slider from "react-slick";
 
 const categoryList = [
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/meal.png',
         name: 'Meal',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/meat.png',
         name: 'Meat',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/vegi.png',
         name: 'Vegi',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/flower.png',
         name: 'Flower',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/drinks.png',
         name: 'Drinks',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/meal2.png',
         name: 'Fresh',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/meat2.png',
         name: 'Frozen',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/vegi2.png',
         name: 'Wine',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/flower2.png',
         name: 'Barkery',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/drinks2.png',
         name: 'Organic',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/drinks.png',
         name: 'Beer',
     },
     {   
-        imageUrl: 'c.png',
+        imageUrl: 'categories/vegi.png',
         name: 'Vegi',
     },
     
