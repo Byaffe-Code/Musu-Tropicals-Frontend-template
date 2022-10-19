@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import { Modal , Button , Navbar , Nav , NavDropdown} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const trendProduct = [
     { imageUrl: 'p.png', title: 'Almonds Lightly Salted ', price: '29', weight: '300 gm'},
@@ -78,7 +79,7 @@ class Headermob extends Component {
                                 </div>
                             </Modal.Body>
                         </Modal>
-                        <div className="col text-center"><a href="/"><img src="assets/images/logo.png" alt="logo" className="logo w-110 pt-1" /></a></div>
+                        <div className="col text-center"><Link to="/"><h1>Musu Tropicals</h1></Link></div>
                         <div className="col text-end"><button onClick={()=>{this.handleCart()}} className="nav-icon mt-1 d-inline-block border-0 bg-transparent" type="button"><i className="feather-shopping-bag text-grey-500 font-xl"></i></button></div>
 
                         <Modal {...this.props} aria-labelledby="contained-modal-title-vcenter" centered show={this.state.cart} className="right">
