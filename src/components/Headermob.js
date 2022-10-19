@@ -60,7 +60,7 @@ class Headermob extends Component {
                                                 <NavDropdown title="Pages" id="basic-nav-dropdown">
                                                     <NavDropdown.Item href="/about">About</NavDropdown.Item>
                                                     <NavDropdown.Item href="/contact">Contact </NavDropdown.Item>
-                                                    <NavDropdown.Item href="/blog">Blog </NavDropdown.Item>
+                                                    {/* <NavDropdown.Item href="/blog">Blog </NavDropdown.Item> */}
                                                     <NavDropdown.Item href="/blog">Single Blog</NavDropdown.Item>
                                                     <NavDropdown.Item href="/faq">Faq</NavDropdown.Item>
                                                     <NavDropdown.Item href="/404">404</NavDropdown.Item>
