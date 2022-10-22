@@ -152,7 +152,7 @@ class Lowerheader extends Component {
                                                     <li><Link className="dropdown-item" to="/"> Logout </Link></li>
                                                 </ul>
                                             </li>
-                                            <li className="nav-item nav-item-toggle"><a className="nav-items text-white" href="/blog">Blog</a></li>
+                                            {/* <li className="nav-item nav-item-toggle"><a className="nav-items text-white" href="/blog">Blog</a></li> */}
                                             <li className="nav-item nav-item-toggle"><a className="nav-items text-white" href="/contact">Contact</a></li>
                                         </ul>
                                         <ul className="navbar-nav ms-auto">

@@ -6,7 +6,7 @@ import Headermob from '../components/Headermob';
 import Upperheader from '../components/Upperheader';
 import Lowerheadertwo from '../components/Lowerheadertwo';
 import Footer from '../components/Footer';
-import Blog from '../components/Blog';
+// import Blog from '../components/Blog';
 import Catagorysldiertwo from '../components/Catagorysldiertwo';
 import Addbannerone from '../components/Addbannerone';
 import Sliderfour from '../components/Sliderfour';
@@ -258,7 +258,7 @@ class Hometwo extends Component {
                     </div>
                 </div>
                 
-                <Blog />
+                {/* <Blog /> */}
                 <Footer />
             </Fragment>
                 
