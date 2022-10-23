@@ -1,4 +1,5 @@
 import React, { Component , Fragment } from "react";
+import { Link } from "react-router-dom";
 
 class Registertwo extends Component {
     render() {
@@ -39,8 +40,8 @@ class Registertwo extends Component {
                                 </form>
                                 
                                 <div className="col-sm-12 p-0 text-start">
-                                    <div className="form-group mb-1"><a href="/registerone" className="text-center font-xsss style2-input text-white fw-600 bg-current border-0 p-0 ">Register</a></div>
-                                    <h6 className="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32 white-text">Already have account <a href="login-one.html" className="fw-700 ms-1">Login</a></h6>
+                                    <div className="form-group mb-1"><a href="/registertwo" className="text-center font-xsss style2-input text-white fw-600 bg-current border-0 p-0 ">Register</a></div>
+                                    <h6 className="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32 white-text">Already have account <Link to='/logintwo'><span className="fw-700 ms-1">Login</span></Link></h6>
                                 </div>
                             </div>
                         </div>  
