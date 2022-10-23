@@ -1,4 +1,4 @@
-import React, { Component , Fragment } from "react";
+import React, { Component, Fragment } from "react";
 import Slider from "react-slick";
 
 import Header from '../components/Header';
@@ -10,34 +10,34 @@ import Footer from '../components/Footer';
 import Catagorysldiertwo from '../components/Catagorysldiertwo';
 import Addbannerone from '../components/Addbannerone';
 import Sliderfour from '../components/Sliderfour';
-
+import { Link } from "react-router-dom";
 
 const discountProduct = [
-    { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm'},
-    { imageUrl: 'deals-of-the-day/image2.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm'},
-    { imageUrl: 'deals-of-the-day/image3.png', title: 'Tailgater Sandwich ', price: '99', weight: '100 gm'},
-    { imageUrl: 'deals-of-the-day/image4.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm'},
-    { imageUrl: 'deals-of-the-day/image5.png', title: 'Apple Juice Organic ', price: '40', weight: '2 Kg'},
-    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
+    { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm' },
+    { imageUrl: 'deals-of-the-day/image2.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm' },
+    { imageUrl: 'deals-of-the-day/image3.png', title: 'Tailgater Sandwich ', price: '99', weight: '100 gm' },
+    { imageUrl: 'deals-of-the-day/image4.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm' },
+    { imageUrl: 'deals-of-the-day/image5.png', title: 'Apple Juice Organic ', price: '40', weight: '2 Kg' },
+    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg' },
 ]
 
 
 const trendProduct = [
-    { imageUrl: 'deals-of-the-day/image1.png', title: 'Apple Juice Organic Food ', price: '39', weight: '200 gm'},
-    { imageUrl: 'deals-of-the-day/image2.png', title: 'Almonds Lightly Salted ', price: '29', weight: '300 gm'},
-    { imageUrl: 'deals-of-the-day/image3.png', title: 'Assorted Donuts Salted ', price: '79', weight: '5 Kg'},
-    { imageUrl: 'deals-of-the-day/image4.png', title: 'Natures Own 100% Wheat ', price: '29', weight: '500 gm'},
-    { imageUrl: 'deals-of-the-day/image5.png', title: 'Blue Diamond Almonds ', price: '40', weight: '400 gm'},
-    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
+    { imageUrl: 'deals-of-the-day/image1.png', title: 'Apple Juice Organic Food ', price: '39', weight: '200 gm' },
+    { imageUrl: 'deals-of-the-day/image2.png', title: 'Almonds Lightly Salted ', price: '29', weight: '300 gm' },
+    { imageUrl: 'deals-of-the-day/image3.png', title: 'Assorted Donuts Salted ', price: '79', weight: '5 Kg' },
+    { imageUrl: 'deals-of-the-day/image4.png', title: 'Natures Own 100% Wheat ', price: '29', weight: '500 gm' },
+    { imageUrl: 'deals-of-the-day/image5.png', title: 'Blue Diamond Almonds ', price: '40', weight: '400 gm' },
+    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg' },
 ]
 
 const bestProduct = [
-    { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm'},
-    { imageUrl: 'deals-of-the-day/image2.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm'},
-    { imageUrl: 'deals-of-the-day/image3.png', title: 'Tailgater Ham Sandwich ', price: '99', weight: '100 gm'},
-    { imageUrl: 'deals-of-the-day/image4.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm'},
-    { imageUrl: 'deals-of-the-day/image5.png', title: 'Apple Juice Organic Food ', price: '40', weight: '2 Kg'},
-    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg'},
+    { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm' },
+    { imageUrl: 'deals-of-the-day/image2.png', title: 'Natures Own Wheat ', price: '89', weight: '400 gm' },
+    { imageUrl: 'deals-of-the-day/image3.png', title: 'Tailgater Ham Sandwich ', price: '99', weight: '100 gm' },
+    { imageUrl: 'deals-of-the-day/image4.png', title: 'Kobita Almonds Salted ', price: '20', weight: '200 gm' },
+    { imageUrl: 'deals-of-the-day/image5.png', title: 'Apple Juice Organic Food ', price: '40', weight: '2 Kg' },
+    { imageUrl: 'deals-of-the-day/image6.png', title: 'Tailgater Ham  Organic ', price: '40', weight: '1 Kg' },
 ]
 
 class Hometwo extends Component {
@@ -51,16 +51,16 @@ class Hometwo extends Component {
             centerMode: false,
             responsive: [
                 {
-                  breakpoint: 749,
-                  settings: {
-                    slidesToShow: 2,
-                  }
+                    breakpoint: 749,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 },
                 {
-                  breakpoint: 0,
-                  settings: {
-                    slidesToShow: 2,
-                  }
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 }
             ]
         };
@@ -74,33 +74,33 @@ class Hometwo extends Component {
             centerMode: false,
             responsive: [
                 {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 4,
-                  }
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                    }
                 },
                 {
-                  breakpoint: 749,
-                  settings: {
-                    slidesToShow: 2,
-                  }
+                    breakpoint: 749,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 },
                 {
-                  breakpoint: 0,
-                  settings: {
-                    slidesToShow: 2,
-                  }
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 }
             ]
         };
         return (
-            <Fragment> 
+            <Fragment>
                 <Headermob />
                 <Upperheader divClass="bg-lightgrey" />
                 <Header />
                 <Lowerheadertwo />
 
-                <div className="banner-wrapper pt-4 pb-4 md-mt-6" style={{backgroundImage: `url("assets/images/background/background.jpeg")`}}>
+                <div className="banner-wrapper pt-4 pb-4 md-mt-6" style={{ backgroundImage: `url("assets/images/background/background.jpeg")` }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-9">
@@ -109,11 +109,11 @@ class Hometwo extends Component {
                             <div className="col-lg-3 ps-lg-0 d-none d-lg-block">
                                 <div className="card w-100 border-0 shadow-none ovh rounded-6 hover-zoom-image">
                                     <img src="assets/images/promotion/promotion-landing.jpeg" alt="banner" className="w-100" />
-                                    <div className="p-4 posa top-0 w-100">
+                                    <div className="p-4 posa top-0 w-100"> 
                                         <span className="fw-700 ls-3 text-white bg-current ps-2 pe-2 lh-24 rounded-6 d-inline-block font-xsssss">30% OFF</span>
                                         <h4 className="font-md fw-700 lh-28 text-grey-900 mb-1 mt-3 ls-0">High Quality <br /> Products</h4>
-                                        <a href="/g-2" className="fw-700 ls-1 border-bottom border-dark lh-20 d-inline-block text-grey-900 font-xsssss">SHOP NOW</a>
-                                    </div>  
+                                        <Link to="/shop-4" ><div className="fw-700 ls-1 border-bottom border-dark lh-20 d-inline-block text-grey-900 font-xsssss">SHOP NOW</div></Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@ class Hometwo extends Component {
                             <div className="col-lg-12">
                                 <div className="card rounded-6 mb-3">
                                     <Slider {...Productsettings} className="slick-arrow-top">
-                                        {bestProduct.map((value , index) => (
+                                        {bestProduct.map((value, index) => (
                                             <div key={index} className="p-3 posr">
                                                 <h4 className="ls-3 font-xsssss text-white text-uppercase bg-current fw-700 p-2 d-inline-block posa rounded-3">30% off</h4>
                                                 <span className="posa right-0 top-0 mt-3 me-3 z-index-5"><i className="ti-heart font-xs text-grey-500"></i></span>
@@ -158,7 +158,7 @@ class Hometwo extends Component {
                                                         <span className="plus">+</span>
                                                     </div>
                                                 </div>
-                                            </div>  
+                                            </div>
                                         ))}
                                     </Slider>
                                 </div>
@@ -171,7 +171,7 @@ class Hometwo extends Component {
                             <div className="col-lg-12">
                                 <div className="card rounded-6 mb-3">
                                     <Slider {...Productsettings} className="slick-arrow-top">
-                                        {trendProduct.map((value , index) => (
+                                        {trendProduct.map((value, index) => (
                                             <div key={index} className="p-3 posr">
                                                 <h4 className="ls-3 font-xsssss text-white text-uppercase bg-current fw-700 p-2 d-inline-block posa rounded-3">30% off</h4>
                                                 <span className="posa right-0 top-0 mt-3 me-3 z-index-5"><i className="ti-heart font-xs text-grey-500"></i></span>
@@ -194,7 +194,7 @@ class Hometwo extends Component {
                                                         <span className="plus">+</span>
                                                     </div>
                                                 </div>
-                                            </div>  
+                                            </div>
                                         ))}
                                     </Slider>
                                 </div>
@@ -203,7 +203,7 @@ class Hometwo extends Component {
                             <div className="col-lg-12 mt-3 mb-3">
                                 <Addbannerone />
                             </div>
-                            
+
                             <div className="col-lg-12">
                                 <h4 className="fw-700 font-xs mb-4 mt-2">Trend Products</h4>
                             </div>
@@ -225,7 +225,7 @@ class Hometwo extends Component {
                             <div className="col-lg-9 ps-lg-0">
                                 <div className="card">
                                     <Slider {...discountProductsettings} className="slick-arrow-top">
-                                        {discountProduct.map((value , index) => (
+                                        {discountProduct.map((value, index) => (
                                             <div key={index} className="p-3 posr">
                                                 <h4 className="ls-3 font-xsssss text-white text-uppercase bg-current fw-700 p-2 d-inline-block posa rounded-3">30% off</h4>
                                                 <span className="posa right-0 top-0 mt-3 me-3 z-index-5"><i className="ti-heart font-xs text-grey-500"></i></span>
@@ -248,20 +248,20 @@ class Hometwo extends Component {
                                                         <span className="plus">+</span>
                                                     </div>
                                                 </div>
-                                            </div>  
+                                            </div>
                                         ))}
                                     </Slider>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
-                
+
                 {/* <Blog /> */}
                 <Footer />
             </Fragment>
-                
+
         );
     }
 }
