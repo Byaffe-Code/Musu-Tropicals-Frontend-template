@@ -109,7 +109,7 @@ class Hometwo extends Component {
                             <div className="col-lg-3 ps-lg-0 d-none d-lg-block">
                                 <div className="card w-100 border-0 shadow-none ovh rounded-6 hover-zoom-image">
                                     <img src="assets/images/promotion/promotion-landing.jpeg" alt="banner" className="w-100" />
-                                    <div className="p-4 posa top-0 w-100"> 
+                                    <div className="p-4 posa top-0 w-100">
                                         <span className="fw-700 ls-3 text-white bg-current ps-2 pe-2 lh-24 rounded-6 d-inline-block font-xsssss">30% OFF</span>
                                         <h4 className="font-md fw-700 lh-28 text-grey-900 mb-1 mt-3 ls-0">High Quality <br /> Products</h4>
                                         <Link to="/shop-4" ><div className="fw-700 ls-1 border-bottom border-dark lh-20 d-inline-block text-grey-900 font-xsssss">SHOP NOW</div></Link>
@@ -140,7 +140,7 @@ class Hometwo extends Component {
                                                 <h4 className="ls-3 font-xsssss text-white text-uppercase bg-current fw-700 p-2 d-inline-block posa rounded-3">30% off</h4>
                                                 <span className="posa right-0 top-0 mt-3 me-3 z-index-5"><i className="ti-heart font-xs text-grey-500"></i></span>
                                                 <div className="clearfix"></div>
-                                                <a href="/single-product" className="d-block text-center p-2"><img src={`assets/images/${value.imageUrl}`} alt="product" className="w-100 mt-1 d-inline-block" /></a>
+                                                <Link to='/single-product-4'><span className="d-block text-center p-2"><img src={`assets/images/${value.imageUrl}`} alt="product" className="w-100 mt-1 d-inline-block" /></span></Link>
                                                 <div className="star d-inline text-left">
                                                     <img src="assets/images/star.png" alt="star" className="w-10 me-1 float-start" />
                                                     <img src="assets/images/star.png" alt="star" className="w-10 me-1 float-start" />
@@ -149,7 +149,7 @@ class Hometwo extends Component {
                                                     <img src="assets/images/star-disable.png" alt="star" className="w-10 me-1 float-start" />
                                                 </div>
                                                 <div className="clearfix"></div>
-                                                <h2 className="mt-1"><a href="/single-product" className="text-grey-700 fw-600 font-xsss lh-2 ls-0">{value.title}</a></h2>
+                                                <h2 className="mt-1"><Link to='/single-product-4'><span className="text-grey-700 fw-600 font-xsss lh-2 ls-0">{value.title}</span></Link></h2>
                                                 <h6 className="font-xss ls-3 fw-700 text-current d-flex"><span className="font-xsssss text-grey-500">$</span>{value.price} <span className="ms-auto me-4 text-grey-500 fw-500 font-xsssss">{value.weight}</span></h6>
                                                 <div className="cart-count d-flex mt-4 mb-2">
                                                     <div className="number">
@@ -176,7 +176,7 @@ class Hometwo extends Component {
                                                 <h4 className="ls-3 font-xsssss text-white text-uppercase bg-current fw-700 p-2 d-inline-block posa rounded-3">30% off</h4>
                                                 <span className="posa right-0 top-0 mt-3 me-3 z-index-5"><i className="ti-heart font-xs text-grey-500"></i></span>
                                                 <div className="clearfix"></div>
-                                                <a href="/single-product" className="d-block text-center p-2"><img src={`assets/images/${value.imageUrl}`} alt="product" className="w-100 mt-1 d-inline-block" /></a>
+                                                <Link to='/single-product-4'><span className="d-block text-center p-2"><img src={`assets/images/${value.imageUrl}`} alt="product" className="w-100 mt-1 d-inline-block" /></span></Link>
                                                 <div className="star d-inline text-left">
                                                     <img src="assets/images/star.png" alt="star" className="w-10 me-1 float-start" />
                                                     <img src="assets/images/star.png" alt="star" className="w-10 me-1 float-start" />
@@ -185,7 +185,7 @@ class Hometwo extends Component {
                                                     <img src="assets/images/star-disable.png" alt="star" className="w-10 me-1 float-start" />
                                                 </div>
                                                 <div className="clearfix"></div>
-                                                <h2 className="mt-1"><a href="/single-product" className="text-grey-700 fw-600 font-xsss lh-2 ls-0">{value.title}</a></h2>
+                                                <h2 className="mt-1"><Link to='/single-product-4'><span href="/single-product" className="text-grey-700 fw-600 font-xsss lh-2 ls-0">{value.title}</span></Link></h2>
                                                 <h6 className="font-xss ls-3 fw-700 text-current d-flex"><span className="font-xsssss text-grey-500">$</span>{value.price} <span className="ms-auto me-4 text-grey-500 fw-500 font-xsssss">{value.weight}</span></h6>
                                                 <div className="cart-count d-flex mt-4 mb-2">
                                                     <div className="number">
@@ -230,7 +230,7 @@ class Hometwo extends Component {
                                                 <h4 className="ls-3 font-xsssss text-white text-uppercase bg-current fw-700 p-2 d-inline-block posa rounded-3">30% off</h4>
                                                 <span className="posa right-0 top-0 mt-3 me-3 z-index-5"><i className="ti-heart font-xs text-grey-500"></i></span>
                                                 <div className="clearfix"></div>
-                                                <a href="/single-product" className="d-block text-center p-2"><img src={`assets/images/${value.imageUrl}`} alt="product" className="w-100 mt-1 d-inline-block" /></a>
+                                                <Link to='/single-product-4'><span className="d-block text-center p-2"><img src={`assets/images/${value.imageUrl}`} alt="product" className="w-100 mt-1 d-inline-block" /></span></Link>
                                                 <div className="star d-inline text-left">
                                                     <img src="assets/images/star.png" alt="star" className="w-10 me-1 float-start" />
                                                     <img src="assets/images/star.png" alt="star" className="w-10 me-1 float-start" />
@@ -239,7 +239,7 @@ class Hometwo extends Component {
                                                     <img src="assets/images/star-disable.png" alt="star" className="w-10 me-1 float-start" />
                                                 </div>
                                                 <div className="clearfix"></div>
-                                                <h2 className="mt-1"><a href="/single-product" className="text-grey-700 fw-600 font-xsss lh-2 ls-0">{value.title}</a></h2>
+                                                <h2 className="mt-1"><Link to='/single-product-4'><span href="/single-product" className="text-grey-700 fw-600 font-xsss lh-2 ls-0">{value.title}</span></Link></h2>
                                                 <h6 className="font-xss ls-3 fw-700 text-current d-flex"><span className="font-xsssss text-grey-500">$</span>{value.price} <span className="ms-auto me-4 text-grey-500 fw-500 font-xsssss">{value.weight}</span></h6>
                                                 <div className="cart-count d-flex mt-4 mb-2">
                                                     <div className="number">
