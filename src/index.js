@@ -56,68 +56,71 @@ import Singlefive from './pages/Singlefive';
 
 
 
-import { BrowserRouter, Switch, Route  } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import { Router } from 'react-router';
+import store from './redux/store';
 
-class Root extends Component{
-  render(){
-      return(
-          <BrowserRouter basename={'/'}>
-              <Switch>
-                    <Route exact path={`${process.env.PUBLIC_URL}/`} component={Hometwo}/>
+class Root extends Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <BrowserRouter basename={'/'}>
+                    <Switch>
+                        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Hometwo} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/homeone`} component={Homeone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/hometwo`} component={Hometwo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/homethree`} component={Homethree}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/homefour`} component={Homefour}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/homefive`} component={Homefive}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/homesix`} component={Homesix}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/homeone`} component={Homeone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/hometwo`} component={Hometwo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/homethree`} component={Homethree} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/homefour`} component={Homefour} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/homefive`} component={Homefive} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/homesix`} component={Homesix} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/saved`} component={Saved}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/cart`} component={Cart}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/checkout`} component={Checkout}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/saved`} component={Saved} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/cart`} component={Cart} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/checkout`} component={Checkout} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/shop-1`} component={Shopone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/shop-2`} component={Shoptwo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/shop-3`} component={Shopthree}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/shop-4`} component={Shopfour}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/shop-5`} component={Shopfive}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/shop-1`} component={Shopone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/shop-2`} component={Shoptwo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/shop-3`} component={Shopthree} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/shop-4`} component={Shopfour} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/shop-5`} component={Shopfive} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/single-product-1`} component={Singleone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/single-product-2`} component={Singletwo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/single-product-3`} component={Singlethree}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/single-product-4`} component={Singlefour}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/single-product-5`} component={Singlefive}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/single-product-1`} component={Singleone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/single-product-2`} component={Singletwo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/single-product-3`} component={Singlethree} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/single-product-4`} component={Singlefour} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/single-product-5`} component={Singlefive} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/blog`} component={Blog}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/faq`} component={Faq}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/blog-single`} component={Blogsingle}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/notfound`} component={Notfound}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/blog`} component={Blog} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/faq`} component={Faq} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/blog-single`} component={Blogsingle} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/notfound`} component={Notfound} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/loginone`} component={Loginone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/logintwo`} component={Logintwo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/registerone`} component={Registerone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/registertwo`} component={Registertwo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/forgotone`} component={Forgotone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/forgottwo`} component={Forgottwo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/verifyone`} component={Verifyone}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/verifytwo`} component={Verifytwo}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/loginone`} component={Loginone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/logintwo`} component={Logintwo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/registerone`} component={Registerone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/registertwo`} component={Registertwo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/forgotone`} component={Forgotone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/forgottwo`} component={Forgottwo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/verifyone`} component={Verifyone} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/verifytwo`} component={Verifytwo} />
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/dashboard`} component={Dashboard}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/orders`} component={Order}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/coupon`} component={Coupon}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/address`} component={Address}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/notification`} component={Notification}/>
-                  
-
-              </Switch>
-          </BrowserRouter>
-      )
-  }
+                        <Route exact path={`${process.env.PUBLIC_URL}/dashboard`} component={Dashboard} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/orders`} component={Order} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/coupon`} component={Coupon} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/address`} component={Address} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/notification`} component={Notification} />
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
+        )
+    }
 }
 
-ReactDOM.render(<Root/>, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 serviceWorker.register();
