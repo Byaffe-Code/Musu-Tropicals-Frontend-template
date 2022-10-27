@@ -61,7 +61,7 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import store from './redux/store';
-
+import ProtectedRoute from './routes/protected';
 class Root extends Component {
     render() {
         return (
@@ -109,12 +109,12 @@ class Root extends Component {
                         <Route exact path={`${process.env.PUBLIC_URL}/verifyone`} component={Verifyone} />
                         <Route exact path={`${process.env.PUBLIC_URL}/verifytwo`} component={Verifytwo} />
 
-                        <Route exact path={`${process.env.PUBLIC_URL}/dashboard`} component={Dashboard} />
-                        <Route exact path={`${process.env.PUBLIC_URL}/orders`} component={Order} />
-                        <Route exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment} />
-                        <Route exact path={`${process.env.PUBLIC_URL}/coupon`} component={Coupon} />
-                        <Route exact path={`${process.env.PUBLIC_URL}/address`} component={Address} />
-                        <Route exact path={`${process.env.PUBLIC_URL}/notification`} component={Notification} />
+                        <ProtectedRoute exact path={`${process.env.PUBLIC_URL}/dashboard`} component={Dashboard} />
+                        <ProtectedRoute exact path={`${process.env.PUBLIC_URL}/orders`} component={Order} />
+                        <ProtectedRoute exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment} />
+                        <ProtectedRoute exact path={`${process.env.PUBLIC_URL}/coupon`} component={Coupon} />
+                        <ProtectedRoute exact path={`${process.env.PUBLIC_URL}/address`} component={Address} />
+                        <ProtectedRoute exact path={`${process.env.PUBLIC_URL}/notification`} component={Notification} />
                     </Switch>
                 </BrowserRouter>
             </Provider>
