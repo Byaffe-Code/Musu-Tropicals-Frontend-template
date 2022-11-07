@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import Header from '../components/Header';
 import Headermob from '../components/Headermob';
 import Upperheader from '../components/Upperheader';
-import Lowerheader from '../components/Lowerheader';
+import Lowerheader from '../components/Lowerheadertwo';
 import Footer from '../components/Footer';
 
 

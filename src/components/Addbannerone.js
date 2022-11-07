@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class Addbannerone extends Component {
     render() {
@@ -8,7 +9,7 @@ class Addbannerone extends Component {
                     <span className="text-current">All natural products</span>
                     <h2 className="text-grey-900"><b className="d-block">SUMMER DISCOUNT </b>of the week</h2>    
                     <div className="clearfix"></div>
-                    <a href="/" className="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                    <Link to="/shop-4"><div className="btn-lg rounded-25 btn bg-current">SHOP NOW</div></Link>
                 </div>
             </div>
         );
