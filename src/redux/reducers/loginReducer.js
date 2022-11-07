@@ -29,7 +29,7 @@ function loginReducer(state = initialLoginState, action) {
                 console.log('Error ',e)
             }
 
-            if (action.payload.email === 'root') {
+            if (action.payload.username === 'root') {
                 //test authentication
                 sessionStorage.setItem('token', 'testtoken')
                 return {
