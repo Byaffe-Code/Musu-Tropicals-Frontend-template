@@ -1,45 +1,43 @@
 import { initialLoginState } from "./initialState";
 import axios from "axios";
-import qs from 'qs'
+
 function loginReducer(state = initialLoginState, action) {
     switch (action.type) {
 
         case 'LOGIN_REQUEST':
-            // const {username,password} = action.payload
-            // const params = new URLSearchParams({
-            //     username,
-            //     password
-            // })
+            const { username, password } = action.payload
+            const params = new URLSearchParams({
+                username,
+                password
+            })
 
-            const data = {
-                method:'POST',
-                headers:{
-                    'Access-Control-Allow-Origin': '*',
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body:action.payload
-
-            }
-            try{
-                fetch('https://musutropicals.herokuapp.com/musubackend/api/login',data).then(
-                response=>console.log(response)
-            )
-            }
-            catch(e){
-                console.log('Error ',e)
-            }
-
-            if (action.payload.username === 'root') {
-                //test authentication
-                sessionStorage.setItem('token', 'testtoken')
-                return {
-                    ...state,
-                    loggingIn: true,
-                    user: action.payload
+            try {
+                async function login() {
+                    const response = await axios.post('https://musutropicals.herokuapp.com/musubackend/api/auth/login', params)
+                    console.log(response)
+                    const { data, status } = response
+                    if (status === 200) {
+                        sessionStorage.setItem('token', data.access_token)
+                        return true
+                    }
                 }
+
+
+
+                if (login()) {
+                    return {
+                        ...state,
+                        loggingIn: true,
+                        user: action.payload
+                    }
+                }
+                return initialLoginState
+            }
+            catch (e) {
+                console.log('Error ', e)
             }
 
-            return initialLoginState
+
 
         case 'LOGIN_SUCCESS':
             return {
