@@ -1,5 +1,5 @@
 import { initialSignUpState } from "./initialState";
-
+import axios from "axios";
 
 function registerReducer(state = initialSignUpState, action) {
 
