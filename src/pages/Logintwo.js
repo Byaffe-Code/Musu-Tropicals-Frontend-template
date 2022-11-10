@@ -49,7 +49,7 @@ class Logintwo extends Component {
         if (isValid) {
             dispatch(loginRequest(username, password))
             const loggingIn = store.getState().loginReducer.loggingIn
-
+            
             if (loggingIn) {
                 dispatch(loginSuccess(username))
                 this.setState({ errors: {} })
