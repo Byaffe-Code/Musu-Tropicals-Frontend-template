@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 const categoryList = [
     {   
@@ -55,7 +56,7 @@ class Sliderfour extends Component {
                                     <h2 className="text-grey-900"><b>{value.titleone}</b>{value.titletwo}</h2>    
                                     <p className="text-grey-600" style={{maxWidth:`350px`}}>{value.text}</p>
                                     <div className="clearfix"></div>
-                                    <a href={value.link} className="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                    <Link to="/shop-4"><div href={value.link} className="btn-lg rounded-25 btn bg-current">SHOP NOW</div></Link>
                                 </div>  
                             </div>
                         </div>  

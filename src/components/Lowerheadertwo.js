@@ -133,8 +133,8 @@ class Lowerheader extends Component {
                                                         <ul className="sub-mega-menu">
                                                             <li><Link to="/about"> About Pages</Link></li>
                                                             <li><Link to="/contact"> Contact Pages</Link></li>
-                                                            <li><Link to="/blog"> Blog Pages</Link></li>
-                                                            <li><Link to="/blog-single"> Single Blog</Link></li>
+                                                            {/* <li><Link to="/blog"> Blog Pages</Link></li>
+                                                            <li><Link to="/blog-single"> Single Blog</Link></li> */}
                                                             <li><Link to="/faq"> Faq Pages</Link></li>
                                                         </ul>
                                                     </li>
