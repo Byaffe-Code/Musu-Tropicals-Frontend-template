@@ -13,7 +13,7 @@ class Headermob extends Component {
                                 <li className="nav-item"><Link className=" ps-0" to="/about">About Us</Link></li>
                                 <li className="nav-item"><Link to="/dashboard">My account</Link></li>
                                 <li className="nav-item"><Link to="/saved">Wishlist</Link></li>
-                                <li className="nav-item"><Link to="/">Order Tracking</Link></li>
+                                <li className="nav-item"><Link to="/orders">Order Tracking</Link></li>
                             </ul>
                         </div>
                         <div className="col-lg-6 text-end">

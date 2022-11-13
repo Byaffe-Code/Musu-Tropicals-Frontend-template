@@ -59,7 +59,7 @@ import Singlefive from './pages/Singlefive';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router';
+// import { Router } from 'react-router';
 import store from './redux/store';
 import ProtectedRoute from './routes/protected';
 class Root extends Component {
