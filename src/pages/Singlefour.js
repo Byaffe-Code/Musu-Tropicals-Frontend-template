@@ -132,9 +132,9 @@ class Singlefour extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 ps-5 d-none d-lg-block">
+                            {/* <div className="col-lg-3 ps-5 d-none d-lg-block">
                                 <a href="/" className="d-inline-block"><img src="https://via.placeholder.com/225x500.png" alt="add" className="rounded-6 ovh w-100" /></a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
