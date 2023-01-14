@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { loginRequest, loginFailure, loginSuccess } from "../redux/actions/loginAction";
-import store from "../redux/store";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 class Logintwo extends Component {
     constructor(props) {
@@ -11,7 +11,8 @@ class Logintwo extends Component {
         this.state = {
             password: '',
             username: '',
-            errors: {}
+            errors: {},
+            error: ''
         };
 
         this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -29,9 +30,7 @@ class Logintwo extends Component {
     }
 
     onLogin = () => {
-        const { dispatch, history } = this.props;
         const { username, password } = this.state
-        dispatch(loginFailure())
         let isValid = true
         let currentErrors = {}
 
@@ -46,29 +45,64 @@ class Logintwo extends Component {
         }
 
         this.setState({ errors: currentErrors })
-        if (isValid) {
-            dispatch(loginRequest(username, password))
-            const loggingIn = store.getState().loginReducer.loggingIn
-            
-            if (loggingIn) {
-                dispatch(loginSuccess(username))
-                this.setState({ errors: {} })
-                history.push('/')
+
+        return isValid === true
+
+    }
+
+    async handleSubmit(e) {
+        const { username, password } = this.state
+        const { history, request, success, failed } = this.props
+        e.preventDefault();
+        if (this.onLogin() === true) {
+            const params = new URLSearchParams({
+                username,
+                password
+            })
+            try {
+                await request()
+                console.log(this.props)
+                const response = await axios.post('https://musutropicals.herokuapp.com/musubackend/api/auth/login', params)
+                const { status, data } = response
+                if (status === 200) {
+                    await success()
+                    history.push('/')
+                }
+                else {
+                    await failed()
+                }
             }
-            else {
-                dispatch(loginFailure())
+            catch (error) {
+                console.log(navigator)
+                var errorMessage = 'An error occured while trying to log in'
+                if (error !== null) {
+                    if (error.response) {
+                        switch (error.response.status) {
+                            case 401:
+                                this.setState({ error: "Invalid username or password" })
+                            case 500:
+                                this.setState({ error: "Internal server error" })
+                            case 503:
+                                this.setState({ error: "Service unavailable" })
+                            default:
+                                this.setState({ error: error.response.data.error })
+                        }
+
+
+                    }
+                }
+                if (error.message === "Network Error") {
+                    this.setState({ error: errorMessage })
+                }
+                if (navigator.onLine === false) {
+                    this.setState({ error: "Cannot connect to the internet" })
+                }
             }
         }
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        this.onLogin()
-    }
-
     render() {
-        
-        const { username, password, errors } = this.state;
+        const { username, password, errors, error } = this.state;
 
         return (
             <Fragment>
@@ -91,12 +125,13 @@ class Logintwo extends Component {
                                     <div className="form-group icon-input mb-3">
                                         <i className="font-sm ti-email text-grey-500 pe-0"></i>
                                         <input type="text" className="style2-input ps-5 form-control text-grey-900 white-text font-xsss fw-600" placeholder="Username" value={username} onChange={(text) => this.handleEmailChange(text)} />
-                                        <span className="fs-5 text-danger" >{errors.usernameError}</span>
+                                        {errors.usernameError && <span className="fs-5 text-danger" >{errors.usernameError}</span>}
                                     </div>
                                     <div className="form-group icon-input mb-1">
                                         <input type="Password" className="style2-input ps-5 form-control text-grey-900 white-text font-xss ls-3" placeholder="Password" value={password} onChange={(text) => this.handlePasswordChange(text)} />
                                         <i className="font-sm ti-lock text-grey-500 pe-0"></i>
-                                        <span className="fs-5 text-danger" >{errors.passwordError}</span>
+                                        {errors.passwordError && <span className="fs-5 text-danger" >{errors.passwordError}</span>}
+                                        {error && <span className="fs-5 text-danger" >{error}</span>}
                                     </div>
                                     <div className="form-check text-start mb-3">
                                         <input type="checkbox" className="form-check-input mt-2" id="exampleCheck5" />
@@ -132,5 +167,11 @@ function mapStateToProps(state) {
         loginState: state.loginReducer
     };
 }
-
-export default connect(mapStateToProps)(Logintwo);
+function mapDispatchToProps(dispatch) {
+    return {
+        request: (username, password) => dispatch(loginRequest(username, password)),
+        failed: () => dispatch(loginFailure()),
+        success: (name) => dispatch(loginSuccess(name))
+    };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Logintwo);
