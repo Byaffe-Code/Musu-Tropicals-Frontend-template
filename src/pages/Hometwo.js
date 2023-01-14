@@ -11,6 +11,7 @@ import Catagorysldiertwo from '../components/Catagorysldiertwo';
 import Addbannerone from '../components/Addbannerone';
 import Sliderfour from '../components/Sliderfour';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const discountProduct = [
     { imageUrl: 'deals-of-the-day/image1.png', title: 'Assorted Donuts Salted ', price: '59', weight: '300 gm' },
