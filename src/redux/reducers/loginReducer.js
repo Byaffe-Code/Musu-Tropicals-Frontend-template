@@ -6,38 +6,11 @@ function loginReducer(state = initialLoginState, action) {
 
         case 'LOGIN_REQUEST':
             const { username, password } = action.payload
-            const params = new URLSearchParams({
-                username,
-                password
-            })
 
-            try {
-                async function login() {
-                    const response = await axios.post('https://musutropicals.herokuapp.com/musubackend/api/auth/login', params)
-                    console.log(response)
-                    const { data, status } = response
-                    if (status === 200) {
-                        sessionStorage.setItem('token', data.access_token)
-                        return true
-                    }
-                }
-
-
-
-                if (login()) {
-                    return {
-                        ...state,
-                        loggingIn: true,
-                        user: action.payload
-                    }
-                }
-                return initialLoginState
+            return {
+                ...state,
+                loggingIn: true,
             }
-            catch (e) {
-                console.log('Error ', e)
-            }
-
-
 
         case 'LOGIN_SUCCESS':
             return {
